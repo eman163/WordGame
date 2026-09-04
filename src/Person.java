@@ -8,18 +8,28 @@ public class Person {
 public void setFirstname(String firstname) {
         this.firstname = firstname;
 }
-public String getLastname() {
+    public String getLastname() {
         return lastname;
-}
-public void setLastname(String lastname) {
+    }
+
+    public void setLastname(String lastname) {
         this.lastname = lastname;
-}
-    public  Person(String firstname) {
+    }
+
+    public Person(String firstname) {
         this.firstname = firstname;
         this.lastname = "";
     }
+
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
+    }
+
+    public String getDisplayName() {
+        if (lastname == null || lastname.isBlank()) {
+            return firstname;
+        }
+        return firstname + " " + lastname;
     }
 }
