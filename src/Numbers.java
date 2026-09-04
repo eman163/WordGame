@@ -1,6 +1,6 @@
 public class Numbers {
-    private int randomNum;
-    public int getRandomNum() {
+    private static int randomNum;
+    public static int getRandomNum() {
         return randomNum;
     }
     public void setRandomNum(int randomNum) {
