@@ -4,7 +4,6 @@ public class Hosts extends Person {
     }
 
     public void randomizeNum() {
-        Numbers numbers = new Numbers();
-        numbers.generateNumber();
+        Numbers.generateNumber();
     }
 }

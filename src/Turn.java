@@ -11,22 +11,15 @@ public class Turn {
 
     public boolean takeTurn(Players player, Hosts host) {
         int guess = readGuess(player, host);
-        int target = Numbers.getRandomNum();
+        boolean isCorrect = Numbers.compareNumbers(guess);
 
-        if (guess == target) {
+        if (isCorrect) {
             player.setMoney(player.getMoney() + WIN_AMOUNT);
-
-            System.out.println("Congratulations, you guessed the number!");
             System.out.println("You win " + Players.formatCurrency(WIN_AMOUNT));
             System.out.println(player);
             return true;
         }
 
-        if (guess > target) {
-            System.out.println("I'm sorry. That guess was too high.");
-        } else {
-            System.out.println("I'm sorry. That guess was too low.");
-        }
 
         player.setMoney(player.getMoney() - LOSE_AMOUNT);
         System.out.println("You lose " + Players.formatCurrency(LOSE_AMOUNT));
