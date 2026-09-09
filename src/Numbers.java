@@ -1,24 +1,26 @@
 public class Numbers {
     private static int randomNum;
+
     public static int getRandomNum() {
         return randomNum;
     }
-    public void setRandomNum(int randomNum) {
-        this.randomNum = randomNum;
+
+    public static void setRandomNum(int randomNum) {
+        Numbers.randomNum = randomNum;
     }
-    public void generateNumber()
-    {
-        randomNum = (int) (Math.random()*101);
+
+    public static void generateNumber() {
+        randomNum = (int) (Math.random() * 101);
     }
-    public boolean compareNumbers(int guess)
-    {
+
+    public static boolean compareNumbers(int guess) {
         if (guess == randomNum) {
-            System.out.println("Congratulations, you guess the number!");
+            System.out.println("Congratulations, you guessed the number!");
             return true;
-        }else if (guess > randomNum) {
+        } else if (guess > randomNum) {
             System.out.println("I'm sorry. That guess was too high.");
             return false;
-        }else {
+        } else {
             System.out.println("I'm sorry. That guess was too low.");
             return false;
         }
