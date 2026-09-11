@@ -21,7 +21,6 @@ public class Physical implements Award {
         String prize = prizes[prizeIndex];
 
         if (isCorrect) {
-            System.out.println(player.getDisplayName() + " won " + prize + "!");
             return 0;
         }
 

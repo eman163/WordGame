@@ -10,7 +10,6 @@ public class Money implements Award {
     @Override
     public int displayWinnings(Players player, boolean isCorrect) {
         if (isCorrect) {
-            System.out.println(player.getDisplayName() + " won " + Players.formatCurrency(winAmount));
             return winAmount;
         }
 

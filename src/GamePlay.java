@@ -13,11 +13,17 @@ public class GamePlay {
         Scanner scanner = new Scanner(System.in);
 
         Hosts host = new Hosts("Quisqueya");
-        host.randomizeNum();
+        host.promptForPhrase(scanner);
 
         for (int i = 0; i < currentPlayers.length; i++) {
-            System.out.println("Player " + (i + 1) + ": What is your first name?");
-            String firstName = scanner.nextLine();
+            String firstName;
+            do {
+                System.out.println("Player " + (i + 1) + ": What is your first name?");
+                firstName = scanner.nextLine().trim();
+                if (firstName.isEmpty()) {
+                    System.out.println("First name is required. Please enter a first name.");
+                }
+            } while (firstName.isEmpty());
 
             System.out.println("Player " + (i + 1) + ": Would you like to enter a last name? Leave blank if not.");
             String lastName = scanner.nextLine();
@@ -30,12 +36,10 @@ public class GamePlay {
         }
 
         playLoop(scanner, host);
-
         scanner.close();
     }
 
     private void playLoop(Scanner scanner, Hosts host) {
-
         Turn turn = new Turn(scanner);
         boolean keepPlaying = true;
 
@@ -52,12 +56,10 @@ public class GamePlay {
             String playAgain = scanner.nextLine();
 
             if (playAgain.equalsIgnoreCase("y")) {
-                host.randomizeNum();
+                host.promptForPhrase(scanner);
             } else {
                 keepPlaying = false;
             }
         }
-
     }
-
 }
