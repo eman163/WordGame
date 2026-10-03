@@ -68,15 +68,8 @@ public final class SoundEffects {
 
     public static String getAttributionText() {
         return "Sound attribution\n\n"
-                + "Background Music: jeopardy.wav from the sound folder\n\n"
-                + "Effect sounds in this project are original MIDI notes generated directly in code in `SoundEffects.java`. "
-                + "No third-party sound effect libraries or recordings are used.\n\n"
-                + "Included sounds:\n"
-                + "• Looping background music (jeopardy.wav)\n"
-                + "• Game start fanfare\n"
-                + "• Correct guess chime\n"
-                + "• Incorrect guess buzzer\n"
-                + "• Physical prize flourish";
+                + "Background Music: jeopardy.wav comes from https://freesound.org/people/1000kcirtap/sounds/554635/\n\n"
+                + "All Freesound sounds are free to use.";
     }
 
     private static void runBackgroundMusicLoop() {

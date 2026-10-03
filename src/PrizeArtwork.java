@@ -26,7 +26,7 @@ public final class PrizeArtwork {
         }
     }
 
-    // Match prize names to image filenames
+
     private static String getPrizeFilename(String prizeName) {
         if (prizeName == null) {
             return null;
@@ -51,23 +51,19 @@ public final class PrizeArtwork {
             return "gas.png";
         }
 
-        return null; // Unknown prize
+        return null;
     }
 
-    // Return information about image credits
+
     public static String getAttributionText() {
         return "Prize Images\n\n"
-                + "These images come from your 'images' folder.\n\n"
-                + "To add images:\n"
-                + "1. Visit https://pixabay.com/\n"
-                + "2. Download free images\n"
-                + "3. Save them to the 'images' folder with these names:\n"
-                + "   - cruise.png\n"
-                + "   - tahiti.png\n"
-                + "   - ski_trip.png\n"
-                + "   - safari.png\n"
-                + "   - spa.png\n"
-                + "   - gas.png\n\n"
+                + "The images below comes from https://pixabay.com/\n"
+                + "   - cruise.png - https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4460493\n"
+                + "   - tahiti.png - https://pixabay.com/photos/tahiti-mountains-paradise-2823883/\n"
+                + "   - ski_trip.png - https://pixabay.com/photos/mountains-nature-tourism-hike-6486093/\n"
+                + "   - safari.png - https://pixabay.com/photos/stalk-africa-binoculars-bush-863823/\n"
+                + "   - spa.png - https://pixabay.com/illustrations/ai-generated-spa-massage-meditation-8970246/\n"
+                + "   - gas.png - https://pixabay.com/photos/fuel-gas-station-refueling-gas-6999650/\n\n"
                 + "All Pixabay images are free to use.";
     }
 }
